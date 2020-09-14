@@ -1,0 +1,125 @@
+<div class="customers-container">
+	<div class="customers-headers">
+		<h1>Register Room</h1>
+	</div>
+	
+	<div class="enquiry-icon-container">
+		<div ng-click="lvm.showAddEnquiryModal('HOTELS',2)">
+			<div class="enquiry-icon-image-container"><img src="images/hotel-booking.png" class="enquiry-icon-imager">
+			</div>
+			<div>
+				<p class="enquiry-icon-text">Hotels</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Hotels Modal -->
+<div class="modal fade" id="HOTELS" role="dialog">
+	<div class="modal-dialog modal-dialog-custom" style="width: 100%">
+	
+	<!-- Modal content-->
+	<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<div class="enquiry-icon-image-container">
+				<img src="images/hotel-booking.png" class="enquiry-icon-imager">
+			</div>
+		</div>
+		<div class="modal-body">
+			<div class="new-input-personal-data-container">
+				<div class="new-input-field-container-width-50p">
+					<input type="text" placeholder="Name.." class="new-input-field"
+						ng-model="lvm.enquiry.name">
+				</div>
+				<div class="new-input-field-container-width-50p">
+					<input type="text" placeholder="Contact no.." class="new-input-field"
+						ng-model="lvm.enquiry.contactNo">
+				</div>
+				<div class="new-input-field-container-width-50p">
+					<input type="email" placeholder="Email id.." class="new-input-field"
+						ng-model="lvm.enquiry.emailId">
+				</div>
+				<div class="new-input-field-container-width-50p">
+					<input type="text" placeholder="Capacity.." class="new-input-field"
+						ng-model="lvm.enquiry.capacity">
+				</div>
+				<div class="new-input-field-container-width-50p">
+					<select type="text" placeholder="Room No.." class="new-input-field"   
+						ng-model="lvm.enquiry.roomNo" ng-click="lvm.showRoomList()">
+						<option value="" disabled selected>Available Rooms..</option>
+						<option id="roomList" ng-repeat=" x in lvm.rooms">{{x.roomNo}}</option>
+					</select>
+
+				</div>
+			</div>
+			<div id="hotel-details-container" style="margin-top: 20px">
+				<div class="details-20perc-container">
+					<p class="font-weight-bold">CHECK-IN</p>
+					<input type="date" class="new-input-field" id="checkin-date-1" ng-model="lvm.enquiry.checkInDate">
+				</div>
+				<div class="details-20perc-container" id="returnDate">
+					<p class="font-weight-bold">CHECK-OUT</p>
+					<input type="date" class="new-input-field" id="checkout-date-1" ng-model="lvm.enquiry.checkOutDate">
+				</div>	
+			</div>
+			<div class="button-container">
+				<input class="add-button" type="submit" value="Register" ng-click="lvm.registerRoom()"/>
+			</div>
+		</div>
+	</div>
+	
+	</div>
+</div>
+
+<link rel="stylesheet" href="angularjs/css/customerdetails.css">
+
+
+
+<div class="customer-details-container" >
+	<div class="customer-details-header-container" id="customerDetailsHeader">
+		<p class="customer-details-header-title-container">Customer Registered Room Details</p>
+		<!-- <p id="customerMenu" class="glyphicon glyphicon-minus customer-details-header-title-container "></p> -->
+	</div>
+	<div class="customer-details-column-container" id="customerDetailsBlock">
+		<div class="customer-details-half-row-container">
+			<div class="customer-title-and-data-container">
+				<div class="customer-details-title">Name</div>
+				<div>{{lvm.customer.name}}</div>
+			</div>
+			<div class="customer-title-and-data-container">
+				<div class="customer-details-title">Email</div>
+				<div>{{lvm.customer.emailId}}</div>
+			</div>
+
+			<div class="customer-title-and-data-container">
+				<div class="customer-details-title">Contact No:</div>
+				<div>{{lvm.customer.contactNo}}</div>
+			</div>
+			<div class="customer-title-and-data-container">
+				<div class="customer-details-title">Room No</div>
+				<div>{{lvm.customer.roomNo}}</div>
+			</div>
+
+			<div class="customer-title-and-data-container">
+				<div class="customer-details-title">Room Type</div>
+				<div>{{lvm.customer.roomType}}</div>
+			</div>
+
+			<div class="customer-title-and-data-container">
+				<div class="customer-details-title">Capacity</div>
+				<div>{{lvm.customer.capacity}}</div>
+			</div>
+
+			<div class="customer-title-and-data-container">
+				<div class="customer-details-title">Check In Date</div>
+				<div>{{lvm.customer.checkInDate}}</div>
+			</div>
+
+			<div class="customer-title-and-data-container">
+				<div class="customer-details-title">Check Out Date</div>
+				<div>{{lvm.customer.checkOutDate}}</div>
+			</div>
+		</div>
+	</div>
+</div>

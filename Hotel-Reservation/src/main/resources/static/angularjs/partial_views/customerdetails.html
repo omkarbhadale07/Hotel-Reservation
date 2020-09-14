@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="angularjs/css/customerdetails.css">
+
+
+
+<div class="customer-details-container" >
+	<div class="customer-details-header-container" id="customerDetailsHeader">
+		<p class="customer-details-header-title-container">Customer Registered Room Details</p>
+		<!-- <p id="customerMenu" class="glyphicon glyphicon-minus customer-details-header-title-container "></p> -->
+	</div>
+	<div class="customer-details-column-container" id="customerDetailsBlock">
+		<div class="customer-details-half-row-container">
+			<div class="customer-title-and-data-container">
+				<div class="customer-details-title">Name</div>
+				<div>{{lvm.customer.name}}</div>
+			</div>
+			<div class="customer-title-and-data-container">
+				<div class="customer-details-title">Email</div>
+				<div>{{lvm.customer.emailId}}</div>
+			</div>
+
+			<div class="customer-title-and-data-container">
+				<div class="customer-details-title">Contact No:</div>
+				<div>{{lvm.customer.contactNo}}</div>
+			</div>
+			<div class="customer-title-and-data-container">
+				<div class="customer-details-title">Room No</div>
+				<div>{{lvm.customer.roomNo}}</div>
+			</div>
+
+			<div class="customer-title-and-data-container">
+				<div class="customer-details-title">Room Type</div>
+				<div>{{lvm.customer.roomType}}</div>
+			</div>
+
+			<div class="customer-title-and-data-container">
+				<div class="customer-details-title">Capacity</div>
+				<div>{{lvm.customer.capacity}}</div>
+			</div>
+
+			<div class="customer-title-and-data-container">
+				<div class="customer-details-title">Check In Date</div>
+				<div>{{lvm.customer.checkInDate}}</div>
+			</div>
+
+			<div class="customer-title-and-data-container">
+				<div class="customer-details-title">Check Out Date</div>
+				<div>{{lvm.customer.checkOutDate}}</div>
+			</div>
+		</div>
+	</div>
+</div>

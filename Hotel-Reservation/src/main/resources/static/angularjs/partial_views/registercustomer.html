@@ -1,0 +1,42 @@
+<form name="myForm" novalidate>
+	<div class="add-form-header">
+		<h4 style="margin:10px;font-size:x-large;"> Register User :</h4>
+	</div>
+	
+	<div class="form-container">
+		<div class="form-half-part-container">
+		   <div class="fomr-label-and-input-container">
+				<div class="form-input-label">Name</div>
+				<div class="fomr-input-field-container">
+					<input type="text" class="form-input-field" placeholder="" name="name"  ng-model="lvm.customer.name" required>
+					<p ng-show="myForm.name.$touched && myForm.name.$invalid" style="color: red;">This Field is required</p>
+				</div>
+			</div>
+			<div class="fomr-label-and-input-container">
+				<div class="form-input-label">EmailId*</div>
+				<div class="fomr-input-field-container">
+					<input type="text" class="form-input-field" placeholder="" name="emailId"  ng-model="lvm.customer.emailId" required>
+					<p ng-show="myForm.emailId.$touched && myForm.emailId.$invalid" style="color: red;">This Field is required</p>
+				</div>
+			</div>
+			<div class="fomr-label-and-input-container">
+				<div class="form-input-label">Contact No</div>
+				<div class="fomr-input-field-container">
+					<input type="text" class="form-input-field" placeholder="" name="contactNo"  ng-model="lvm.customer.contactNo" required>
+					<p ng-show="myForm.contactNo.$touched && myForm.contactNo.$invalid" style="color: red;">This Field is required</p>
+				</div>
+			</div>
+			<div class="fomr-label-and-input-container">
+				<div class="form-input-label">Password</div>
+				<div class="fomr-input-field-container">
+					<input type="text" class="form-input-field" placeholder="" name="password"  ng-model="lvm.customer.password" required>
+					<p ng-show="myForm.password.$touched && myForm.password.$invalid" style="color: red;">This Field is required</p>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<div class="button-container">
+		<input class="add-button" type="submit" value="Register" ng-disabled="myForm.$invalid1" ng-click="lvm.registerCustomer(myForm)"/>
+	</div>
+</form>

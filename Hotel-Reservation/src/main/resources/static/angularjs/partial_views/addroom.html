@@ -1,0 +1,35 @@
+<form name="myForm" novalidate>
+	<div class="add-form-header">
+		<h4 style="padding: 0px 0px 0px 90px;">Add Room Details :</h4>
+	</div>
+	
+	<div class="form-container">
+		<div class="form-half-part-container">
+		   <div class="fomr-label-and-input-container">
+				<div class="form-input-label">Room Type*</div>
+				<div class="fomr-input-field-container">
+					<input type="text" class="form-input-field" placeholder="" name="roomType"  ng-model="lvm.room.roomType" required>
+					<p ng-show="myForm.roomType.$touched && myForm.roomType.$invalid" style="color: red;">This Field is required</p>
+				</div>
+			</div>
+			<div class="fomr-label-and-input-container">
+				<div class="form-input-label">Room No*</div>
+				<div class="fomr-input-field-container">
+					<input type="text" class="form-input-field" placeholder="" name="roomNo"  ng-model="lvm.room.roomNo" required>
+					<p ng-show="myForm.roomNo.$touched && myForm.roomNo.$invalid" style="color: red;">This Field is required</p>
+				</div>
+			</div>
+			<div class="fomr-label-and-input-container">
+				<div class="form-input-label">Capacity</div>
+				<div class="fomr-input-field-container">
+					<input type="text" class="form-input-field" placeholder="" name="capacity"  ng-model="lvm.room.capacity" required>
+					<p ng-show="myForm.capacity.$touched && myForm.capacity.$invalid" style="color: red;">This Field is required</p>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<div class="button-container">
+		<input class="add-button" type="submit" value="Add Room" ng-disabled="myForm.$invalid1" ng-click="lvm.addroom(myForm)"/>
+	</div>
+</form>
